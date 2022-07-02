@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Selección Argentina</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table,
+    th,
+    td {
+        text-align: center;
+        border-collapse: collapse;
+        border-radius: 25px;
+        border: 2px solid #155f9c;
+    }
+
+    button {
+        margin: 10px;
+        border-radius: 2px;
+    }
+
+    .logo {
+        height: 10%;
+        width: 10%;
+    }
+</style>
+
+<body>
+    <h1>Lista de Convocados</h1>
+
+    <table class="center">
+        <thead>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Club</th>
+            <th>Altura</th>
+            <th>Pierna Hábil</th>
+        </thead>
+        <tbody>
+            <% jugadores.forEach(function(jugador){ %>
+                <tr>
+                    <td>
+                        <%= jugador.apellido %>
+                    </td>
+                    <td>
+                        <%= jugador.nombre %>
+                    </td>
+                    <td>
+                        <%= jugador.edad %>
+                    </td>
+                    <td>
+                        <%= jugador.club %>
+                    </td>
+                    <td>
+                        <%= jugador.altura %>
+                    </td>
+                    <td>
+                        <%= jugador.piernaHabil %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+    <a href="/"><button>Volver</button></a>
+
+</body>
+
+</html>
